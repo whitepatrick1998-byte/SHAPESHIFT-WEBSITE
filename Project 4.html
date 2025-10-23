@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project One | Patrick White</title>
+
+  <style>
+    :root {
+      --accent: #007a4e;
+      --bg: #ffffff;
+      --text: #1a1a1a;
+      --radius: 12px;
+      --container: 1100px;
+      --gradient: linear-gradient(135deg, #0f5132, #8a6239, #006f63);
+    }
+
+    body {
+      margin: 0;
+      font-family: system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.5;
+    }
+    .container {
+      max-width: var(--container);
+      margin: 0 auto;
+      padding: 0 16px;
+    }
+
+    /* Header */
+    header {
+      background: rgba(255,255,255,0.9);
+      backdrop-filter: blur(6px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    }
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 0;
+    }
+    .brand img {
+      height: 40px;
+    }
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      gap: 20px;
+    }
+    nav a {
+      text-decoration: none;
+      color: var(--text);
+      font-weight: 600;
+    }
+
+    /* Hero */
+    .hero {
+      text-align: center;
+      padding: 80px 20px;
+      border-radius: 16px;
+      margin: 40px auto;
+      max-width: 1100px;
+      position: relative;
+      background: var(--gradient);
+      color: #fff;
+    }
+    .hero h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin: 0;
+    }
+
+    /* Content */
+    .content {
+      background: rgba(255,255,255,0.9);
+      padding: 40px;
+      border-radius: var(--radius);
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      margin: 40px auto;
+    }
+
+    /* Gallery */
+    .gallery {
+      margin: 40px auto;
+    }
+    .gallery h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 16px;
+    }
+    .gallery-grid img {
+      width: 100%;
+      border-radius: var(--radius);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+
+    footer {
+      background: var(--gradient);
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="container nav">
+      <div class="brand">
+        <img src="jpg8.PNG" alt="Logo" style="width: 100px; height: auto;">
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <h1>Project Four - Replacment part </h1>
+  </section>
+
+  <!-- CONTENT -->
+  <section class="content container">
+    <h2>About Project Four</h2>
+  <p>
+     The client required a replacment part for a machine with a time constraint
+    </p>
+    <p>
+      Orgional part failed on a mahine criical to the clients business and due to time constraint client reached out to get a replacement part machined from aluminium until the OEM part was delievered. 
+    </p>
+	<h2>Solution</h2>
+	<p>
+      The part was quicly drawn up on CAD and programmed for maching using aluminium stock
+    </p>
+	<h2>Outcome</h2>
+	<p>Quick turn around part ready for install and within reasonable time for the client
+     
+    </p>
+	<h2>Utilised Services</h2>
+        <li><i class="fas fa-drafting-compass"></i> CAD/CAM</li>
+        <li><i class="fas fa-sync-alt"></i> Reverse Engineering</li>
+  </section>
+
+  <!-- GALLERY -->
+  <section class="gallery container">
+    <h2>Project Gallery</h2>
+    <div class="gallery-grid">
+      <img src="Project 4-Replacment part-01.JPG">
+      <img src="Project 4-Replacment part-02.JPG">
+      <img src="Project 4-Replacment part-03.JPG">
+	  <img src="Project 4-Replacment part-04.JPG">
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© <span id="year">2025</span> Patrick White. All rights reserved.</p>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>
