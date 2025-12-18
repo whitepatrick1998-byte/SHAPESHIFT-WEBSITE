@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -35,7 +34,6 @@
       padding: 0 16px;
     }
 
-    /* Header */
     header {
       background: rgba(255,255,255,0.95);
       backdrop-filter: blur(6px);
@@ -66,7 +64,6 @@
     }
     nav a:hover { color: var(--accent); }
 
-    /* Hero */
     .hero {
       background: var(--gradient);
       text-align: center;
@@ -91,10 +88,7 @@
       font-weight: 700;
       box-shadow: 0 2px 6px rgba(0,0,0,0.3);
     }
-    .hero h1 { font-size: 2.6rem; margin-bottom: 10px; }
-    .hero p { font-size: 1.2rem; opacity: 0.9; }
 
-    /* Content Sections */
     .content-section {
       background: var(--bg-light);
       padding: 40px;
@@ -117,7 +111,6 @@
       margin-right: auto;
     }
 
-    /* Specs */
     .specs-list {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -129,43 +122,36 @@
       border-left: 4px solid var(--accent);
       padding: 12px 16px;
       border-radius: var(--radius);
-      color: var(--text);
-      box-shadow: inset 0 0 4px rgba(0,0,0,0.05);
     }
 
-    /* Gallery */
-    .image-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 16px;
-      margin-top: 20px;
+  .image-grid img {
+  width: 100%;
+  aspect-ratio: 4 / 3;   /* choose ratio you like */
+  object-fit: cover;     /* crops instead of stretching */
+  border-radius: var(--radius);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
     }
     .image-grid img {
       width: 100%;
       border-radius: var(--radius);
       box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-    }
-    .image-grid img:hover {
-      transform: scale(1.03);
-      box-shadow: 0 4px 14px rgba(0,0,0,0.2);
     }
 
-    /* Purchase Section */
     .purchase-box {
       background: #f9f9f9;
       padding: 24px;
       border-radius: var(--radius);
       text-align: center;
-      margin-top: 20px;
-      box-shadow: inset 0 0 10px rgba(0,0,0,0.05);
     }
+
     .price {
       font-size: 1.6rem;
       color: var(--accent);
       font-weight: bold;
-      margin-bottom: 10px;
     }
+
     .download-btn {
       display: inline-block;
       background: var(--accent);
@@ -174,140 +160,114 @@
       border-radius: var(--radius);
       text-decoration: none;
       font-weight: 600;
-      margin-top: 10px;
-      transition: background 0.3s ease, transform 0.2s ease;
-    }
-    .download-btn:hover {
-      background: #009666;
-      transform: translateY(-2px);
     }
 
-    /* Footer */
     footer {
       background: var(--gradient);
       color: #fff;
       text-align: center;
       padding: 20px;
       margin-top: 40px;
-      border-top-left-radius: var(--radius);
-      border-top-right-radius: var(--radius);
     }
-    footer small {
-      display: block;
-      color: #eee;
-      opacity: 0.9;
-      font-size: 0.85rem;
-    }
-
   </style>
 </head>
+
 <body>
 
-  <!-- HEADER -->
-  <header>
-    <div class="container nav">
-      <div class="brand">
-        <img src="Jpg8.png" alt="ShapeShift Logo" style="width:110px; height:auto;">
-      </div>
-      <nav>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="#purchase">Buy</a></li>
-        </ul>
-      </nav>
+<header>
+  <div class="container nav">
+    <div class="brand">
+      <img src="Jpg8.png" alt="ShapeShift Logo" style="width:110px;">
     </div>
-  </header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#purchase">Buy</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
 
-  <!-- HERO -->
-  <section class="hero">
-    <div class="ribbon">For Sale</div>
-    <h1>Tractor Toolbox</h1>
-    <p>A durable, precision-engineered storage solution for the iconic Massey Ferguson 135.</p>
-  </section>
+<section class="hero">
+  <div class="ribbon">For Sale</div>
+  <h1>Tractor Toolbox</h1>
+  <p>A durable, precision-engineered storage solution for the iconic Massey Ferguson 135.</p>
+</section>
 
-  <!-- ABOUT PRODUCT -->
-  <section class="content-section container">
-    <h2>Overview</h2>
-    <p>
-      Designed to complement the timeless look of the Massey Ferguson 135, this toolbox provides secure, weather-resistant storage without compromising the tractor’s aesthetic. Each unit is built in-house to exacting standards and can be customised to suit your needs.
-    </p>
-    <div class="image-grid">
-      <img src="SSO-Tractortoolbox1.jpg" alt="Tractor Toolbox - Front View">
-      <img src="SSO-Tractortoolbox2.jpg" alt="Tractor Toolbox - Installed">
-    </div>
-  </section>
+<section class="content-section container">
+  <h2>Overview</h2>
+  <p>
+    Designed to complement the timeless look of the Massey Ferguson 135, this toolbox provides secure, weather-resistant storage without compromising the tractor’s aesthetic.
+  </p>
+  <div class="image-grid">
+    <img src="SSO-Tractortoolbox1.jpg">
+    <img src="SSO-Tractortoolbox2.jpg">
+  </div>
+</section>
 
-  <!-- SPECIFICATIONS -->
-  <section class="content-section container">
-    <h2>Specifications</h2>
-    <div class="specs-list">
-      <div>Material: 3mm Structural Steel</div>
-      <div>Finish: Galvanised and Painted options available </div>
-      <div>Mounting: Direct fit for MF135 weight frame- brackets and bolts provided.</div>
-      <div>Weight: ~15kg</div>
-      <div>Dimensions: 400mm x 300mm x 300mm</div>
-      <div>Manufactured: In-house by ShapeShift Engineering</div>
-    </div>
-    <img src="SSO-Tractortoolbox3.jpg" alt="Tractor Toolbox - Galvanished">
-    <img src="SSO-Tractortoolbox4.jpg" alt="Tractor Toolbox - Massey red">
-  </section>
+<section class="content-section container">
+  <h2>Specifications</h2>
+  <div class="specs-list">
+    <div>Material: 3mm Structural Steel</div>
+    <div>Finish: Galvanised or Painted</div>
+    <div>Mounting: Direct MF135 fit</div>
+    <div>Weight: ~15kg</div>
+    <div>Dimensions: 400 × 300 × 300mm</div>
+    <div>Manufactured in-house</div>
+  </div>
+</section>
 
-  <!-- DESIGN NOTES -->
-  <section class="content-section container">
-    <h2>Design & Engineering</h2>
-    <p>
-      This design combines functionality with respect for vintage machinery. Each toolbox is cut, welded, and finished using precision fabrication techniques to ensure reliability in the field. The internal design allows for both tool organization and protection from the elements. The design allows space for two orgional weights along with the tolbox. 
-    </p>
-     <p>
-      The toolbox has enough room to store common tools needed daily on the farm and then some, including sections for hand tools, fasteners and larger tools. 
-    </p>
-<video
-  class="loop-preview"
-  autoplay
-  muted
-  loop
-  playsinline
-  preload="auto"
-  poster="example1.jpg"  <!-- optional fallback image -->
-  width="640" height="360"
->
-  <source src="SSO-Tractor toolbox-ASSY-00-ROTATE01.mp4" type="video/mp4">
-  <!-- final fallback for very old browsers -->
-  <img src="example1.gif" alt="Tractor Toolbox - motion preview">
-</video>
+<!-- ✅ NEW LID OPTIONS SECTION -->
+<section class="content-section container">
+  <h2>Lid Options & Configurations</h2>
+  <p>
+    The toolbox can be supplied with a range of lid configurations to suit different working environments and user preferences.
+  </p>
 
-<style>
-  .loop-preview {
-    width: 100%;
-    height: auto;
-    border-radius: 12px;
-    display: block;
-    object-fit: cover; /* keeps it nicely cropped */
-    box-shadow: 0 6px 18px rgba(0,0,0,0.12);
-  }
-</style>
-    
-  </section>
+  <div class="specs-list">
+    <div>✔ Hinged steel lid with weather seal</div>
+    <div>✔ Lift-off lid for maximum access</div>
+    <div>✔ Lockable hasp for added security</div>
+    <div>✔ Gas strut assisted opening (optional)</div>
+    <div>✔ Custom lid heights available on request</div>
+  </div>
 
-  <!-- PURCHASE -->
-  <section id="purchase" class="content-section container">
-    <h2>Purchase & Availability</h2>
-    <div class="purchase-box">
-      <p class="price">£ TBC</p>
-      <p>Available now. Lead time: TBC.</p>
-      <a href="mailto:patrickwhiteengineering@gmail.com?subject=ShapeShift%20Tractor%20Toolbox%20Order" class="download-btn">Enquire / Order Now</a>
-    </div>
-  </section>
+  <!-- Optional images later -->
+  <!--
+  <div class="image-grid">
+    <img src="lid-option-1.jpg">
+    <img src="lid-option-2.jpg">
+  </div>
+  -->
+</section>
 
-  <!-- FOOTER -->
-  <footer>
-    <p>© <span id="year"></span> ShapeShift Engineering. All rights reserved.</p>
-    <small>Designed and engineered by Patrick White.</small>
-  </footer>
+<section class="content-section container">
+  <h2>Design & Engineering</h2>
+  <p>
+    Built with respect for vintage machinery, the toolbox is fabricated using precision cutting and welding techniques, ensuring durability in demanding agricultural environments.
+  </p>
 
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
+  <video class="loop-preview" autoplay muted loop playsinline>
+    <source src="SSO-Tractor toolbox-ASSY-00-ROTATE01.mp4" type="video/mp4">
+  </video>
+</section>
+
+<section id="purchase" class="content-section container">
+  <h2>Purchase & Availability</h2>
+  <div class="purchase-box">
+    <p class="price">£ TBC</p>
+    <p>Available now. Lead time: TBC.</p>
+    <a href="mailto:patrickwhiteengineering@gmail.com" class="download-btn">Enquire / Order Now</a>
+  </div>
+</section>
+
+<footer>
+  <p>© <span id="year"></span> ShapeShift Engineering</p>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
 
 </body>
 </html>
