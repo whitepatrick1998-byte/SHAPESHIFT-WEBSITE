@@ -311,6 +311,59 @@
     </div>
   </header>
 
+/* Model platform bars */
+.model-links {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 900px;
+  margin: 30px auto 0;
+}
+
+.model-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 18px;
+  border-radius: 10px;
+  text-decoration: none;
+  color: #fff;
+  font-weight: 600;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.model-bar:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+}
+
+/* Platform-specific themes */
+.model-bar.grabcad {
+  background: linear-gradient(135deg, #0a0a0a, #2a2a2a);
+}
+
+.model-bar.cgtrader {
+  background: linear-gradient(135deg, #1f7a5c, #2ecc71);
+}
+
+.model-bar span {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.95rem;
+}
+
+.model-bar i {
+  font-size: 1.2rem;
+  opacity: 0.9;
+}
+
+.model-bar small {
+  font-weight: 400;
+  opacity: 0.85;
+}
+
+  
   <!-- HERO -->
   <section class="hero">
     <h1>Patrick White</h1>
@@ -412,6 +465,27 @@
         </a>
       </div>
     </div>
+<!-- MODEL DOWNLOAD LINKS -->
+<div class="model-links">
+  <a href="https://grabcad.com/patrick.white-20" target="_blank" class="model-bar grabcad">
+    <span>
+      <i class="fa-solid fa-cube"></i>
+      GrabCAD
+      <small>Free downloadable models & community uploads</small>
+    </span>
+    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+  </a>
+
+<a href="https://www.cgtrader.com/designers/pwhiteaddy" target="_blank" class="model-bar cgtrader">
+  <span>
+    <i class="fa-solid fa-store"></i>
+    CGTrader
+    <small>Paid & licensed 3D models and digital products</small>
+  </span>
+  <i class="fa-solid fa-arrow-up-right-from-square"></i>
+</a>
+
+    
   </section>
 
   <!-- SERVICES -->
